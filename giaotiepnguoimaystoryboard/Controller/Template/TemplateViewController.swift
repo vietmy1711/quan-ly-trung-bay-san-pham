@@ -10,10 +10,10 @@ import UIKit
 class TemplateViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var searchBarHeightConstraint: NSLayoutConstraint!
     
     private var lastContentOffset: CGFloat = 0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,21 +35,14 @@ class TemplateViewController: UIViewController {
         tableView.register(UINib(nibName: "TemplateCell", bundle: nil), forCellReuseIdentifier: "TemplateCell")
         tableView.separatorStyle = .none
         
-//        let anotherSearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 56))
-//        
-//        tableView.tableHeaderView = anotherSearchBar
-        
+        setupTableViewHeaderView()
     }
     
-    func showSearchBar() {
-        let searchController = UISearchController()
-        searchController.searchBar.delegate = self
-        searchController.hidesNavigationBarDuringPresentation = true
-        navigationItem.hidesSearchBarWhenScrolling = true
-        searchController.searchBar.sizeToFit()
-        searchController.searchBar.returnKeyType = UIReturnKeyType.search
-        navigationItem.searchController = searchController
-        searchController.searchBar.becomeFirstResponder()
+    func setupTableViewHeaderView() {
+        let headerView = HeaderView()
+        headerView.resultNumber = 50
+        tableView.tableHeaderView = headerView
+        tableView.layoutIfNeeded()
     }
 }
 
@@ -63,19 +56,19 @@ extension TemplateViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if (self.lastContentOffset > scrollView.contentOffset.y) {
-            // move up
-            self.searchBarHeightConstraint.constant = 56
-        } else if (self.lastContentOffset < scrollView.contentOffset.y) {
-            // move down
-            self.searchBarHeightConstraint.constant = 0
-        }
-        // update the new position acquired
-        self.lastContentOffset = scrollView.contentOffset.y
-        
-    }
+//
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if (self.lastContentOffset > scrollView.contentOffset.y) {
+//            // move up
+//            self.searchBarHeightConstraint.constant = 56
+//        } else if (self.lastContentOffset < scrollView.contentOffset.y) {
+//            // move down
+//            self.searchBarHeightConstraint.constant = 0
+//        }
+//        // update the new position acquired
+//        self.lastContentOffset = scrollView.contentOffset.y
+//
+//    }
     
 }
 

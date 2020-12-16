@@ -10,8 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemplateViewController" customModule="giaotiepnguoimaystoryboard" customModuleProvider="target">
             <connections>
-                <outlet property="searchBar" destination="16i-L3-ez6" id="t8L-qD-vhe"/>
-                <outlet property="searchBarHeightConstraint" destination="hxs-vM-Wd4" id="udA-d9-Sf7"/>
                 <outlet property="tableView" destination="Fwj-f1-Bss" id="pKS-yU-EA4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,60 +19,15 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Ei-HS-NWS">
-                    <rect key="frame" x="0.0" y="44" width="414" height="126"/>
-                    <subviews>
-                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for templates" translatesAutoresizingMaskIntoConstraints="NO" id="16i-L3-ez6">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="56" id="hxs-vM-Wd4"/>
-                            </constraints>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dzw-2e-ViY">
-                            <rect key="frame" x="0.0" y="56" width="414" height="70"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OCo-P6-ePe">
-                                    <rect key="frame" x="24" y="0.0" width="366" height="70"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQV-8A-q3r">
-                                            <rect key="frame" x="0.0" y="0.0" width="52" height="70"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" systemColor="secondaryLabelColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xd7-wg-RkW">
-                                            <rect key="frame" x="331" y="0.0" width="35" height="70"/>
-                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                            <state key="normal" title="Filter">
-                                                <color key="titleColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="OCo-P6-ePe" secondAttribute="bottom" id="gTu-ky-dP9"/>
-                                <constraint firstAttribute="trailing" secondItem="OCo-P6-ePe" secondAttribute="trailing" constant="24" id="moh-dj-7jw"/>
-                                <constraint firstItem="OCo-P6-ePe" firstAttribute="top" secondItem="Dzw-2e-ViY" secondAttribute="top" id="nUK-YL-UNS"/>
-                                <constraint firstItem="OCo-P6-ePe" firstAttribute="leading" secondItem="Dzw-2e-ViY" secondAttribute="leading" constant="24" id="nt8-NI-qwB"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fwj-f1-Bss">
-                    <rect key="frame" x="0.0" y="178" width="414" height="684"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Ei-HS-NWS" secondAttribute="trailing" id="9Ib-X1-T0Q"/>
-                <constraint firstItem="Fwj-f1-Bss" firstAttribute="top" secondItem="9Ei-HS-NWS" secondAttribute="bottom" constant="8" id="Qoc-b1-fil"/>
-                <constraint firstItem="9Ei-HS-NWS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Rc4-QK-BL2"/>
-                <constraint firstItem="9Ei-HS-NWS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UPA-Fs-gkA"/>
+                <constraint firstItem="Fwj-f1-Bss" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="etT-cx-62v"/>
                 <constraint firstItem="Fwj-f1-Bss" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="f6e-Od-Gqk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Fwj-f1-Bss" secondAttribute="bottom" id="s1v-JZ-rPZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fwj-f1-Bss" secondAttribute="trailing" id="yH6-jZ-bo1"/>
@@ -83,9 +36,6 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

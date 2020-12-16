@@ -20,6 +20,7 @@
 		8D5DBB6C2588BBC500E68175 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB6B2588BBC500E68175 /* UIColorExtension.swift */; };
 		8D5DBB722588BE5600E68175 /* TemplateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB702588BE5600E68175 /* TemplateCell.swift */; };
 		8D5DBB732588BE5600E68175 /* TemplateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5DBB712588BE5600E68175 /* TemplateCell.xib */; };
+		8D5DBB782589AA7100E68175 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB772589AA7100E68175 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8D5DBB6B2588BBC500E68175 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		8D5DBB702588BE5600E68175 /* TemplateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCell.swift; sourceTree = "<group>"; };
 		8D5DBB712588BE5600E68175 /* TemplateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateCell.xib; sourceTree = "<group>"; };
+		8D5DBB772589AA7100E68175 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		8D5DBB16258876B200E68175 /* giaotiepnguoimaystoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				8D5DBB762589AA5200E68175 /* Custom */,
 				8D5DBB6F2588BE4400E68175 /* Cell */,
 				8D5DBB6A2588BBB100E68175 /* Extension */,
 				8D5DBB2D2588775400E68175 /* Controller */,
@@ -134,6 +137,14 @@
 				8D5DBB712588BE5600E68175 /* TemplateCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		8D5DBB762589AA5200E68175 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				8D5DBB772589AA7100E68175 /* HeaderView.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 				8D5DBB662588BA5D00E68175 /* ReportViewController.swift in Sources */,
 				8D5DBB1A258876B200E68175 /* SceneDelegate.swift in Sources */,
 				8D5DBB6C2588BBC500E68175 /* UIColorExtension.swift in Sources */,
+				8D5DBB782589AA7100E68175 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
