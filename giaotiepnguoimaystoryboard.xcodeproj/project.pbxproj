@@ -10,6 +10,8 @@
 		8D1464232589EF8D00A35AD5 /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1464222589EF8D00A35AD5 /* TemplateModel.swift */; };
 		8D1464292589F5B900A35AD5 /* NewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1464272589F5B900A35AD5 /* NewTemplateViewController.swift */; };
 		8D14642A2589F5B900A35AD5 /* NewTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1464282589F5B900A35AD5 /* NewTemplateViewController.xib */; };
+		8D146430258A4FAA00A35AD5 /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14642E258A4FAA00A35AD5 /* AddQuestionViewController.swift */; };
+		8D146431258A4FAA00A35AD5 /* AddQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D14642F258A4FAA00A35AD5 /* AddQuestionViewController.xib */; };
 		8D5DBB18258876B200E68175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB17258876B200E68175 /* AppDelegate.swift */; };
 		8D5DBB1A258876B200E68175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB19258876B200E68175 /* SceneDelegate.swift */; };
 		8D5DBB21258876B300E68175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5DBB20258876B300E68175 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		8D1464222589EF8D00A35AD5 /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		8D1464272589F5B900A35AD5 /* NewTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTemplateViewController.swift; sourceTree = "<group>"; };
 		8D1464282589F5B900A35AD5 /* NewTemplateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTemplateViewController.xib; sourceTree = "<group>"; };
+		8D14642E258A4FAA00A35AD5 /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
+		8D14642F258A4FAA00A35AD5 /* AddQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddQuestionViewController.xib; sourceTree = "<group>"; };
 		8D5DBB14258876B200E68175 /* giaotiepnguoimaystoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giaotiepnguoimaystoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5DBB17258876B200E68175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D5DBB19258876B200E68175 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 			path = NewTemplate;
 			sourceTree = "<group>";
 		};
+		8D14642D258A4F9200A35AD5 /* AddQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				8D14642E258A4FAA00A35AD5 /* AddQuestionViewController.swift */,
+				8D14642F258A4FAA00A35AD5 /* AddQuestionViewController.xib */,
+			);
+			path = AddQuestion;
+			sourceTree = "<group>";
+		};
 		8D5DBB0B258876B200E68175 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +125,7 @@
 		8D5DBB2D2588775400E68175 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8D14642D258A4F9200A35AD5 /* AddQuestion */,
 				8D5DBB632588BA4800E68175 /* Report */,
 				8D1464262589F58C00A35AD5 /* NewTemplate */,
 				8D5DBB5C2588B8A400E68175 /* Template */,
@@ -235,6 +249,7 @@
 				8D5DBB24258876B300E68175 /* LaunchScreen.storyboard in Resources */,
 				8D5DBB21258876B300E68175 /* Assets.xcassets in Resources */,
 				8D5DBB612588B9B000E68175 /* TemplateViewController.xib in Resources */,
+				8D146431258A4FAA00A35AD5 /* AddQuestionViewController.xib in Resources */,
 				8D5DBB3A258877F900E68175 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +266,7 @@
 				8D5DBB602588B9B000E68175 /* TemplateViewController.swift in Sources */,
 				8D1464232589EF8D00A35AD5 /* TemplateModel.swift in Sources */,
 				8D5DBB722588BE5600E68175 /* TemplateCell.swift in Sources */,
+				8D146430258A4FAA00A35AD5 /* AddQuestionViewController.swift in Sources */,
 				8D5DBB662588BA5D00E68175 /* ReportViewController.swift in Sources */,
 				8D5DBB1A258876B200E68175 /* SceneDelegate.swift in Sources */,
 				8D1464292589F5B900A35AD5 /* NewTemplateViewController.swift in Sources */,

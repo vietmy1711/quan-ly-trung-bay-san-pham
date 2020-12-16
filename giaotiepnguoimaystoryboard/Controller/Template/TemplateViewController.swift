@@ -59,7 +59,7 @@ class TemplateViewController: UIViewController {
     
     func setupTableViewHeaderView() {
         let headerView = HeaderView()
-        headerView.resultNumber = 50
+        headerView.resultNumber = templates.count
         tableView.tableHeaderView = headerView
         tableView.layoutIfNeeded()
     }

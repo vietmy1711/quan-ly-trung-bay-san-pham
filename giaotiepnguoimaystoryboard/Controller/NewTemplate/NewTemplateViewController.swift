@@ -85,7 +85,8 @@ class NewTemplateViewController: UIViewController {
     }
     
     @objc func addQuestionBtnClicked() {
-        print("yessss")
+        let addQuestionVC = AddQuestionViewController()
+        self.navigationController?.pushViewController(addQuestionVC, animated: true)
     }
 
 }
