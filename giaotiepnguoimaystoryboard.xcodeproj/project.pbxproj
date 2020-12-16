@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1464232589EF8D00A35AD5 /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1464222589EF8D00A35AD5 /* TemplateModel.swift */; };
 		8D5DBB18258876B200E68175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB17258876B200E68175 /* AppDelegate.swift */; };
 		8D5DBB1A258876B200E68175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB19258876B200E68175 /* SceneDelegate.swift */; };
 		8D5DBB21258876B300E68175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5DBB20258876B300E68175 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D1464222589EF8D00A35AD5 /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		8D5DBB14258876B200E68175 /* giaotiepnguoimaystoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giaotiepnguoimaystoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5DBB17258876B200E68175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D5DBB19258876B200E68175 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D1464212589EF7600A35AD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D1464222589EF8D00A35AD5 /* TemplateModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8D5DBB0B258876B200E68175 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		8D5DBB16258876B200E68175 /* giaotiepnguoimaystoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				8D1464212589EF7600A35AD5 /* Model */,
 				8D5DBB762589AA5200E68175 /* Custom */,
 				8D5DBB6F2588BE4400E68175 /* Cell */,
 				8D5DBB6A2588BBB100E68175 /* Extension */,
@@ -223,6 +234,7 @@
 				8D5DBB39258877F900E68175 /* LoginViewController.swift in Sources */,
 				8D5DBB18258876B200E68175 /* AppDelegate.swift in Sources */,
 				8D5DBB602588B9B000E68175 /* TemplateViewController.swift in Sources */,
+				8D1464232589EF8D00A35AD5 /* TemplateModel.swift in Sources */,
 				8D5DBB722588BE5600E68175 /* TemplateCell.swift in Sources */,
 				8D5DBB662588BA5D00E68175 /* ReportViewController.swift in Sources */,
 				8D5DBB1A258876B200E68175 /* SceneDelegate.swift in Sources */,

@@ -10,14 +10,22 @@ import UIKit
 class TemplateViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var newButton: UIButton!
     
     private var lastContentOffset: CGFloat = 0
     
+    var templates: [TemplateModel] = [
+        TemplateModel(id: 1, name: "Ghi nhận siêu thị", detail: "Dành cho siêu thị lớn", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage")),
+        TemplateModel(id: 2, name: "Ghi nhận quán cà phê", detail: "Có tủ lạnh trưng bày", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage")),
+        TemplateModel(id: 3, name: "Ghi nhận tạp hóa", detail: "Có quầy hàng", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"))
+
+    ]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,6 +35,14 @@ class TemplateViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
+    }
+    
+    func setupUI() {
+        newButton.layer.cornerRadius = 30
+        newButton.layer.shadowColor = UIColor.black.cgColor
+        newButton.layer.shadowOpacity = 0.2
+        newButton.layer.shadowOffset = CGSize(width: 2, height: 2)
+        newButton.layer.shadowRadius = 5
     }
     
     func setupTableView() {
@@ -48,28 +64,14 @@ class TemplateViewController: UIViewController {
 
 extension TemplateViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return templates.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TemplateCell") as! TemplateCell
+        cell.configWithTemplate(template: templates[indexPath.row])
         return cell
     }
-    
-//
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if (self.lastContentOffset > scrollView.contentOffset.y) {
-//            // move up
-//            self.searchBarHeightConstraint.constant = 56
-//        } else if (self.lastContentOffset < scrollView.contentOffset.y) {
-//            // move down
-//            self.searchBarHeightConstraint.constant = 0
-//        }
-//        // update the new position acquired
-//        self.lastContentOffset = scrollView.contentOffset.y
-//
-//    }
-    
 }
 
 extension TemplateViewController: UISearchBarDelegate {
