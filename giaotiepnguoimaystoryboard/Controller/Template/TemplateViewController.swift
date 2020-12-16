@@ -36,6 +36,8 @@ class TemplateViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationController?.navigationBar.tintColor = .mainColor
+        
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func setupUI() {

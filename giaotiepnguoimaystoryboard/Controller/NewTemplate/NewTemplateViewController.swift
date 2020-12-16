@@ -26,6 +26,8 @@ class NewTemplateViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.title = "New Template"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add question", style: .plain, target: self, action: #selector(addQuestionBtnClicked))
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     func setupUI() {
@@ -82,6 +84,9 @@ class NewTemplateViewController: UIViewController {
         self.present(pickerController, animated: true, completion: nil)
     }
     
+    @objc func addQuestionBtnClicked() {
+        print("yessss")
+    }
 
 }
 
