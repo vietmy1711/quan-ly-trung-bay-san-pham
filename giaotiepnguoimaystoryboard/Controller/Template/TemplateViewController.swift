@@ -31,10 +31,11 @@ class TemplateViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.title = "Template"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController?.navigationBar.tintColor = .mainColor
     }
     
     func setupUI() {
@@ -59,6 +60,11 @@ class TemplateViewController: UIViewController {
         headerView.resultNumber = 50
         tableView.tableHeaderView = headerView
         tableView.layoutIfNeeded()
+    }
+    
+    @IBAction func newTemplateBtnClicked(_ sender: UIButton) {
+        let newTemplateVC = NewTemplateViewController()
+        self.navigationController?.pushViewController(newTemplateVC, animated: true)
     }
 }
 
