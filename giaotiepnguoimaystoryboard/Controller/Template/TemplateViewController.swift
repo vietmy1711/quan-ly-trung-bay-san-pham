@@ -13,12 +13,13 @@ class TemplateViewController: UIViewController {
     @IBOutlet weak var newButton: UIButton!
     
     private var lastContentOffset: CGFloat = 0
+    var headerView: HeaderView!
+
     
     var templates: [TemplateModel] = [
-        TemplateModel(id: 1, name: "Ghi nhận siêu thị", detail: "Dành cho siêu thị lớn", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage")),
-        TemplateModel(id: 2, name: "Ghi nhận quán cà phê", detail: "Có tủ lạnh trưng bày", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage")),
-        TemplateModel(id: 3, name: "Ghi nhận tạp hóa", detail: "Có quầy hàng", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"))
-
+        TemplateModel(name: "Ghi nhận siêu thị", detail: "Dành cho siêu thị lớn", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"), questions: []),
+        TemplateModel(name: "Ghi nhận quán cà phê", detail: "Có tủ lạnh trưng bày", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"), questions: []),
+        TemplateModel(name: "Ghi nhận tạp hóa", detail: "Có quầy hàng", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"), questions: [])
     ]
     
     
@@ -58,7 +59,7 @@ class TemplateViewController: UIViewController {
     }
     
     func setupTableViewHeaderView() {
-        let headerView = HeaderView()
+        headerView = HeaderView()
         headerView.resultNumber = templates.count
         tableView.tableHeaderView = headerView
         tableView.layoutIfNeeded()
@@ -66,12 +67,14 @@ class TemplateViewController: UIViewController {
     
     @IBAction func newTemplateBtnClicked(_ sender: UIButton) {
         let newTemplateVC = NewTemplateViewController()
+        newTemplateVC.delegate = self
         self.navigationController?.pushViewController(newTemplateVC, animated: true)
     }
 }
 
 extension TemplateViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        headerView.resultNumber = templates.count
         return templates.count
     }
     
@@ -80,7 +83,36 @@ extension TemplateViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configWithTemplate(template: templates[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            if (editingStyle == UITableViewCell.EditingStyle.delete) {
+                let alert = UIAlertController(title: "Delete this template", message: "Are you sure you want to delete this template", preferredStyle: .alert)
+                let delete = UIAlertAction(title: "Yes", style: .destructive) { (_) in
+                    self.templates.remove(at: indexPath.row)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+                let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                alert.addAction(delete)
+                alert.addAction(cancel)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
 }
 
 extension TemplateViewController: UISearchBarDelegate {
+}
+
+extension TemplateViewController: NewTemplateDelegate {
+    func didFinishedWithNewTemplate(template: TemplateModel) {
+        self.templates.append(template)
+        self.tableView.reloadData()
+    }
 }

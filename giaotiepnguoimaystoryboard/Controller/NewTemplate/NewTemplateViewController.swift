@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol NewTemplateDelegate: class {
+    func didFinishedWithNewTemplate(template: TemplateModel)
+}
+
 class NewTemplateViewController: UIViewController {
     
     @IBOutlet weak var nameView: UIView!
@@ -17,6 +21,9 @@ class NewTemplateViewController: UIViewController {
     @IBOutlet weak var addImageButton: UIButton!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     
+    weak var delegate: NewTemplateDelegate?
+    
+    let template = TemplateModel(name: "", detail: "", date: "", image: UIImage(), questions: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +47,8 @@ class NewTemplateViewController: UIViewController {
         detailTextView.text = "Template detail"
         detailTextView.textColor = UIColor.placeholderText
         detailTextView.delegate = self
+        
+        nameTextField.delegate = self
         
         addImageButton.contentEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
         addImageButton.layer.cornerRadius = 8
@@ -86,6 +95,8 @@ class NewTemplateViewController: UIViewController {
     
     @objc func addQuestionBtnClicked() {
         let addQuestionVC = AddQuestionViewController()
+        addQuestionVC.template = self.template
+        addQuestionVC.delegate = self
         self.navigationController?.pushViewController(addQuestionVC, animated: true)
     }
 
@@ -103,7 +114,15 @@ extension NewTemplateViewController: UITextViewDelegate {
         if textView.text.isEmpty {
             textView.text = "Template detail"
             textView.textColor = UIColor.placeholderText
+        } else {
+            self.template.detail = textView.text
         }
+    }
+}
+
+extension NewTemplateViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.template.name = textField.text ?? ""
     }
 }
 
@@ -111,6 +130,13 @@ extension NewTemplateViewController: UIImagePickerControllerDelegate, UINavigati
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         self.thumbnailImageView.image = chosenImage
+        self.template.image = chosenImage
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension NewTemplateViewController: AddQuestionDelegate {
+    func didFinishedWithNewTemplate(template: TemplateModel) {
+        self.delegate?.didFinishedWithNewTemplate(template: template)
     }
 }

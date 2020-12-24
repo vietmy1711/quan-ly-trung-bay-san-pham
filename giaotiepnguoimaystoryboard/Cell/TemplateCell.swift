@@ -27,7 +27,7 @@ class TemplateCell: UITableViewCell {
     func configWithTemplate(template: TemplateModel) {
         self.nameLabel.text = template.name
         self.detailLabel.text = template.detail
-        self.dateLabel.text = template.date
+        self.dateLabel.text = template.questions.count > 1 ? "\(template.questions.count) questions" : "\(template.questions.count) question"
         self.templateImageView.image = template.image
 
     }

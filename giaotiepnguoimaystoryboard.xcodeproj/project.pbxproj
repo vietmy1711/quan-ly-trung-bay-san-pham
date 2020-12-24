@@ -26,6 +26,9 @@
 		8D5DBB722588BE5600E68175 /* TemplateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB702588BE5600E68175 /* TemplateCell.swift */; };
 		8D5DBB732588BE5600E68175 /* TemplateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5DBB712588BE5600E68175 /* TemplateCell.xib */; };
 		8D5DBB782589AA7100E68175 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB772589AA7100E68175 /* HeaderView.swift */; };
+		8DDC3C082594866E00F3A03F /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC3C072594866E00F3A03F /* QuestionModel.swift */; };
+		8DDC3C0C2594878300F3A03F /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC3C0A2594878300F3A03F /* QuestionCell.swift */; };
+		8DDC3C0D2594878300F3A03F /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC3C0B2594878300F3A03F /* QuestionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		8D5DBB702588BE5600E68175 /* TemplateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCell.swift; sourceTree = "<group>"; };
 		8D5DBB712588BE5600E68175 /* TemplateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateCell.xib; sourceTree = "<group>"; };
 		8D5DBB772589AA7100E68175 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		8DDC3C072594866E00F3A03F /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		8DDC3C0A2594878300F3A03F /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		8DDC3C0B2594878300F3A03F /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1464222589EF8D00A35AD5 /* TemplateModel.swift */,
+				8DDC3C072594866E00F3A03F /* QuestionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +181,8 @@
 			children = (
 				8D5DBB702588BE5600E68175 /* TemplateCell.swift */,
 				8D5DBB712588BE5600E68175 /* TemplateCell.xib */,
+				8DDC3C0A2594878300F3A03F /* QuestionCell.swift */,
+				8DDC3C0B2594878300F3A03F /* QuestionCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -247,6 +256,7 @@
 				8D14642A2589F5B900A35AD5 /* NewTemplateViewController.xib in Resources */,
 				8D5DBB732588BE5600E68175 /* TemplateCell.xib in Resources */,
 				8D5DBB24258876B300E68175 /* LaunchScreen.storyboard in Resources */,
+				8DDC3C0D2594878300F3A03F /* QuestionCell.xib in Resources */,
 				8D5DBB21258876B300E68175 /* Assets.xcassets in Resources */,
 				8D5DBB612588B9B000E68175 /* TemplateViewController.xib in Resources */,
 				8D146431258A4FAA00A35AD5 /* AddQuestionViewController.xib in Resources */,
@@ -264,6 +274,7 @@
 				8D5DBB39258877F900E68175 /* LoginViewController.swift in Sources */,
 				8D5DBB18258876B200E68175 /* AppDelegate.swift in Sources */,
 				8D5DBB602588B9B000E68175 /* TemplateViewController.swift in Sources */,
+				8DDC3C082594866E00F3A03F /* QuestionModel.swift in Sources */,
 				8D1464232589EF8D00A35AD5 /* TemplateModel.swift in Sources */,
 				8D5DBB722588BE5600E68175 /* TemplateCell.swift in Sources */,
 				8D146430258A4FAA00A35AD5 /* AddQuestionViewController.swift in Sources */,
@@ -271,6 +282,7 @@
 				8D5DBB1A258876B200E68175 /* SceneDelegate.swift in Sources */,
 				8D1464292589F5B900A35AD5 /* NewTemplateViewController.swift in Sources */,
 				8D5DBB6C2588BBC500E68175 /* UIColorExtension.swift in Sources */,
+				8DDC3C0C2594878300F3A03F /* QuestionCell.swift in Sources */,
 				8D5DBB782589AA7100E68175 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
