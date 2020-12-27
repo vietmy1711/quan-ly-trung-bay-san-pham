@@ -28,6 +28,7 @@ class NewTemplateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,9 +56,15 @@ class NewTemplateViewController: UIViewController {
         
         thumbnailImageView.layer.cornerRadius = 8
         thumbnailImageView.backgroundColor = UIColor(white: 0, alpha: 0.04)
+        
+        thumbnailImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleAddImage)))
     }
     
     @IBAction func addImageBtnClicked(_ sender: UIButton) {
+        handleAddImage()
+    }
+    
+    @objc func handleAddImage() {
         let actionSheet = UIAlertController(title: "Choose your source", message: "", preferredStyle: .actionSheet)
         let camera = UIAlertAction(title: "Take from camera", style: .default) { [weak self] (_) in
             self?.chooseFromCamera()
@@ -73,6 +80,7 @@ class NewTemplateViewController: UIViewController {
         actionSheet.addAction(cancel)
 
         self.present(actionSheet, animated: true, completion: nil)
+
     }
     
     func chooseFromCamera() {

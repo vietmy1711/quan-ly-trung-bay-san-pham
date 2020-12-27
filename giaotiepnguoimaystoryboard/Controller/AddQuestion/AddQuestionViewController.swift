@@ -64,7 +64,17 @@ class AddQuestionViewController: UIViewController {
     }
     
     @IBAction func newQuestionButtonClicked(_ sender: UIButton) {
-        self.template?.questions.append(QuestionModel(title: "Hello", type: .text, choices: []))
+        let questionDetailVC = QuestionDetailViewController()
+        questionDetailVC.delegate = self
+        let navVC = UINavigationController(rootViewController: questionDetailVC)
+        self.present(navVC, animated: true, completion: nil)
+    }
+    
+}
+
+extension AddQuestionViewController: QuestionDetailDelegate {
+    func didFinishWithQuestion(question: QuestionModel) {
+        self.template?.questions.append(question)
         tableView.reloadData()
     }
     
