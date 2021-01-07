@@ -7,6 +7,12 @@
 
 import UIKit
 
+var templates: [TemplateModel] = [
+    TemplateModel(name: "Ghi nhận siêu thị", detail: "Dành cho siêu thị lớn", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"), questions: []),
+    TemplateModel(name: "Ghi nhận quán cà phê", detail: "Có tủ lạnh trưng bày", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"), questions: []),
+    TemplateModel(name: "Ghi nhận tạp hóa", detail: "Có quầy hàng", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"), questions: [])
+]
+
 class TemplateViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -14,14 +20,8 @@ class TemplateViewController: UIViewController {
     
     private var lastContentOffset: CGFloat = 0
     var headerView: HeaderView!
-
     
-    var templates: [TemplateModel] = [
-        TemplateModel(name: "Ghi nhận siêu thị", detail: "Dành cho siêu thị lớn", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"), questions: []),
-        TemplateModel(name: "Ghi nhận quán cà phê", detail: "Có tủ lạnh trưng bày", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"), questions: []),
-        TemplateModel(name: "Ghi nhận tạp hóa", detail: "Có quầy hàng", date: "1 year ago", image: #imageLiteral(resourceName: "templateimage"), questions: [])
-    ]
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,7 +93,7 @@ extension TemplateViewController: UITableViewDelegate, UITableViewDataSource {
             if (editingStyle == UITableViewCell.EditingStyle.delete) {
                 let alert = UIAlertController(title: "Delete this template", message: "Are you sure you want to delete this template", preferredStyle: .alert)
                 let delete = UIAlertAction(title: "Yes", style: .destructive) { (_) in
-                    self.templates.remove(at: indexPath.row)
+                    templates.remove(at: indexPath.row)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -105,6 +105,14 @@ extension TemplateViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let newTemplateVC = NewTemplateViewController()
+        newTemplateVC.delegate = self
+        newTemplateVC.template = templates[indexPath.row]
+        self.navigationController?.pushViewController(newTemplateVC, animated: true)
+
+    }
 }
 
 extension TemplateViewController: UISearchBarDelegate {
@@ -112,7 +120,13 @@ extension TemplateViewController: UISearchBarDelegate {
 
 extension TemplateViewController: NewTemplateDelegate {
     func didFinishedWithNewTemplate(template: TemplateModel) {
-        self.templates.append(template)
+        for temp in templates {
+            if ObjectIdentifier(temp) == ObjectIdentifier(template) {
+                self.tableView.reloadData()
+                return
+            }
+        }
+        templates.append(template)
         self.tableView.reloadData()
     }
 }

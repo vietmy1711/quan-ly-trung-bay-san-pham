@@ -20,16 +20,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         
-        let templateVC = UINavigationController(rootViewController: TemplateViewController())
+        let templateVC = TemplateViewController()
+
+        let navTemplateVC = UINavigationController(rootViewController: templateVC)
         templateVC.modalPresentationStyle = .fullScreen
         templateVC.tabBarItem = UITabBarItem(title: "Template", image: UIImage(systemName: "doc.text.fill"), tag: 0)
 
-        let reportVC = UINavigationController(rootViewController: ReportViewController())
-        reportVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(systemName: "doc.append"), tag: 1)
+        let reportVC = ReportViewController()
+        
+        let navReportVC = UINavigationController(rootViewController: reportVC)
+        navReportVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(systemName: "doc.append"), tag: 1)
 
         let tabBar = UITabBarController()
         tabBar.tabBar.tintColor = .mainColor
-        tabBar.viewControllers = [templateVC, reportVC]
+        
+        tabBar.viewControllers = [navTemplateVC, navReportVC]
 
 //        let rootVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
         self.window?.rootViewController = tabBar//rootVC

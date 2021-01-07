@@ -23,7 +23,7 @@ class NewTemplateViewController: UIViewController {
     
     weak var delegate: NewTemplateDelegate?
     
-    let template = TemplateModel(name: "", detail: "", date: "", image: UIImage(), questions: [])
+    var template = TemplateModel(name: "", detail: "", date: "", image: nil, questions: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +58,21 @@ class NewTemplateViewController: UIViewController {
         thumbnailImageView.backgroundColor = UIColor(white: 0, alpha: 0.04)
         
         thumbnailImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleAddImage)))
+        
+        setupWithTemplate()
+    }
+    
+    func setupWithTemplate() {
+        if !template.name.isEmpty {
+            self.nameTextField.text = template.name
+        }
+        if !template.detail.isEmpty {
+            self.detailTextView.text = template.detail
+            self.detailTextView.textColor = UIColor.black
+        }
+        if template.image != nil {
+            self.thumbnailImageView.image = template.image
+        }
     }
     
     @IBAction func addImageBtnClicked(_ sender: UIButton) {
