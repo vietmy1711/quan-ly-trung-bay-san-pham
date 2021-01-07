@@ -67,6 +67,12 @@ class ReportViewController: UIViewController {
         }
         tableView.reloadData()
     }
+    
+    
+    @IBAction func newReportBtnClicked(_ sender: UIButton) {
+        let chooseTemplateVC = ChooseTemplateViewController()
+        self.navigationController?.pushViewController(chooseTemplateVC, animated: true)
+    }
 }
 
 extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
