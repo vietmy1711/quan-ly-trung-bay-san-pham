@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -59,12 +59,22 @@
                             <constraint firstAttribute="height" constant="1" id="OAa-bz-9TD"/>
                         </constraints>
                     </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9o9-N2-aQV">
+                        <rect key="frame" x="288" y="47" width="20" height="16.5"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Yhk-Yt-WKi"/>
+                            <constraint firstAttribute="width" constant="20" id="h8x-JM-IJL"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="gIr-vO-9Hl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="60A-at-41r"/>
                     <constraint firstAttribute="trailing" secondItem="gIr-vO-9Hl" secondAttribute="trailing" constant="24" id="6cT-CU-oxG"/>
                     <constraint firstAttribute="bottom" secondItem="gIr-vO-9Hl" secondAttribute="bottom" constant="4" id="6u1-to-ZTj"/>
                     <constraint firstItem="k39-uO-p1A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="HKF-VD-b9h"/>
+                    <constraint firstItem="9o9-N2-aQV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qxW-DQ-LTA"/>
+                    <constraint firstAttribute="trailing" secondItem="9o9-N2-aQV" secondAttribute="trailing" constant="12" id="rfL-GJ-Aac"/>
                     <constraint firstItem="gIr-vO-9Hl" firstAttribute="top" secondItem="k39-uO-p1A" secondAttribute="bottom" constant="16" id="s3K-aS-9Dg"/>
                     <constraint firstAttribute="trailing" secondItem="k39-uO-p1A" secondAttribute="trailing" constant="16" id="wyx-rT-JFL"/>
                     <constraint firstItem="k39-uO-p1A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="z5H-xi-BRg"/>
@@ -81,6 +91,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="templateimage" width="88" height="79"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

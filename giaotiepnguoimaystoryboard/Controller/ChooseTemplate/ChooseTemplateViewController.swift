@@ -43,7 +43,7 @@ extension ChooseTemplateViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.navigationController?.pushViewController(newTemplateVC, animated: true)
-
+        let newReportVC = NewReportViewController()
+        self.navigationController?.pushViewController(newReportVC, animated: true)
     }
 }

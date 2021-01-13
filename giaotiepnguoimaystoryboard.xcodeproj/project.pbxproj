@@ -35,6 +35,8 @@
 		8D5FB2A12598705600C1DD6D /* QuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FB29F2598705600C1DD6D /* QuestionDetailViewController.swift */; };
 		8D5FB2A22598705600C1DD6D /* QuestionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5FB2A02598705600C1DD6D /* QuestionDetailViewController.xib */; };
 		8D5FB2A625987E9500C1DD6D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FB2A525987E9500C1DD6D /* UIViewControllerExtension.swift */; };
+		8D64811E25AEAA4800A25322 /* NewReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64811C25AEAA4800A25322 /* NewReportViewController.swift */; };
+		8D64811F25AEAA4800A25322 /* NewReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D64811D25AEAA4800A25322 /* NewReportViewController.xib */; };
 		8DDC3C082594866E00F3A03F /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC3C072594866E00F3A03F /* QuestionModel.swift */; };
 		8DDC3C0C2594878300F3A03F /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC3C0A2594878300F3A03F /* QuestionCell.swift */; };
 		8DDC3C0D2594878300F3A03F /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC3C0B2594878300F3A03F /* QuestionCell.xib */; };
@@ -71,6 +73,8 @@
 		8D5FB29F2598705600C1DD6D /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
 		8D5FB2A02598705600C1DD6D /* QuestionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionDetailViewController.xib; sourceTree = "<group>"; };
 		8D5FB2A525987E9500C1DD6D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		8D64811C25AEAA4800A25322 /* NewReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReportViewController.swift; sourceTree = "<group>"; };
+		8D64811D25AEAA4800A25322 /* NewReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewReportViewController.xib; sourceTree = "<group>"; };
 		8DDC3C072594866E00F3A03F /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		8DDC3C0A2594878300F3A03F /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		8DDC3C0B2594878300F3A03F /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		8D15659825A70D7A003DFF0F /* NewReport */ = {
 			isa = PBXGroup;
 			children = (
+				8D64811C25AEAA4800A25322 /* NewReportViewController.swift */,
+				8D64811D25AEAA4800A25322 /* NewReportViewController.xib */,
 			);
 			path = NewReport;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 				8D5DBB21258876B300E68175 /* Assets.xcassets in Resources */,
 				8D5DBB612588B9B000E68175 /* TemplateViewController.xib in Resources */,
 				8D146431258A4FAA00A35AD5 /* AddQuestionViewController.xib in Resources */,
+				8D64811F25AEAA4800A25322 /* NewReportViewController.xib in Resources */,
 				8D15659D25A70E1B003DFF0F /* ChooseTemplateViewController.xib in Resources */,
 				8D5DBB3A258877F900E68175 /* LoginViewController.xib in Resources */,
 			);
@@ -330,6 +337,7 @@
 				8D5FB2A625987E9500C1DD6D /* UIViewControllerExtension.swift in Sources */,
 				8D5DBB602588B9B000E68175 /* TemplateViewController.swift in Sources */,
 				8D5FB2A12598705600C1DD6D /* QuestionDetailViewController.swift in Sources */,
+				8D64811E25AEAA4800A25322 /* NewReportViewController.swift in Sources */,
 				8DDC3C082594866E00F3A03F /* QuestionModel.swift in Sources */,
 				8D1464232589EF8D00A35AD5 /* TemplateModel.swift in Sources */,
 				8D5DBB722588BE5600E68175 /* TemplateCell.swift in Sources */,
