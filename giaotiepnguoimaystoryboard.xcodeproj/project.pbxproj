@@ -37,6 +37,10 @@
 		8D5FB2A625987E9500C1DD6D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FB2A525987E9500C1DD6D /* UIViewControllerExtension.swift */; };
 		8D64811E25AEAA4800A25322 /* NewReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64811C25AEAA4800A25322 /* NewReportViewController.swift */; };
 		8D64811F25AEAA4800A25322 /* NewReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D64811D25AEAA4800A25322 /* NewReportViewController.xib */; };
+		8D64812825AEDEDD00A25322 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64812625AEDEDD00A25322 /* SignatureViewController.swift */; };
+		8D64812925AEDEDD00A25322 /* SignatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D64812725AEDEDD00A25322 /* SignatureViewController.xib */; };
+		8D64812E25AEDF0900A25322 /* AnswerQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64812C25AEDF0900A25322 /* AnswerQuestionViewController.swift */; };
+		8D64812F25AEDF0900A25322 /* AnswerQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D64812D25AEDF0900A25322 /* AnswerQuestionViewController.xib */; };
 		8DDC3C082594866E00F3A03F /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC3C072594866E00F3A03F /* QuestionModel.swift */; };
 		8DDC3C0C2594878300F3A03F /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC3C0A2594878300F3A03F /* QuestionCell.swift */; };
 		8DDC3C0D2594878300F3A03F /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC3C0B2594878300F3A03F /* QuestionCell.xib */; };
@@ -75,6 +79,10 @@
 		8D5FB2A525987E9500C1DD6D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		8D64811C25AEAA4800A25322 /* NewReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReportViewController.swift; sourceTree = "<group>"; };
 		8D64811D25AEAA4800A25322 /* NewReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewReportViewController.xib; sourceTree = "<group>"; };
+		8D64812625AEDEDD00A25322 /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
+		8D64812725AEDEDD00A25322 /* SignatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignatureViewController.xib; sourceTree = "<group>"; };
+		8D64812C25AEDF0900A25322 /* AnswerQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionViewController.swift; sourceTree = "<group>"; };
+		8D64812D25AEDF0900A25322 /* AnswerQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerQuestionViewController.xib; sourceTree = "<group>"; };
 		8DDC3C072594866E00F3A03F /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		8DDC3C0A2594878300F3A03F /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		8DDC3C0B2594878300F3A03F /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
@@ -174,6 +182,8 @@
 		8D5DBB2D2588775400E68175 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8D64812525AEDEBB00A25322 /* Signature */,
+				8D64812125AEDBC600A25322 /* AnswerQuestion */,
 				8D15659925A70DFA003DFF0F /* ChooseTemplate */,
 				8D15659825A70D7A003DFF0F /* NewReport */,
 				8D5FB29E2598702900C1DD6D /* QuestionDetail */,
@@ -252,6 +262,24 @@
 			path = QuestionDetail;
 			sourceTree = "<group>";
 		};
+		8D64812125AEDBC600A25322 /* AnswerQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				8D64812C25AEDF0900A25322 /* AnswerQuestionViewController.swift */,
+				8D64812D25AEDF0900A25322 /* AnswerQuestionViewController.xib */,
+			);
+			path = AnswerQuestion;
+			sourceTree = "<group>";
+		};
+		8D64812525AEDEBB00A25322 /* Signature */ = {
+			isa = PBXGroup;
+			children = (
+				8D64812625AEDEDD00A25322 /* SignatureViewController.swift */,
+				8D64812725AEDEDD00A25322 /* SignatureViewController.xib */,
+			);
+			path = Signature;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5FB2A22598705600C1DD6D /* QuestionDetailViewController.xib in Resources */,
+				8D64812F25AEDF0900A25322 /* AnswerQuestionViewController.xib in Resources */,
 				8D5DBB672588BA5D00E68175 /* ReportViewController.xib in Resources */,
 				8D14642A2589F5B900A35AD5 /* NewTemplateViewController.xib in Resources */,
 				8D15659625A6F7B1003DFF0F /* ReportCell.xib in Resources */,
@@ -322,6 +351,7 @@
 				8D64811F25AEAA4800A25322 /* NewReportViewController.xib in Resources */,
 				8D15659D25A70E1B003DFF0F /* ChooseTemplateViewController.xib in Resources */,
 				8D5DBB3A258877F900E68175 /* LoginViewController.xib in Resources */,
+				8D64812925AEDEDD00A25322 /* SignatureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +367,7 @@
 				8D5FB2A625987E9500C1DD6D /* UIViewControllerExtension.swift in Sources */,
 				8D5DBB602588B9B000E68175 /* TemplateViewController.swift in Sources */,
 				8D5FB2A12598705600C1DD6D /* QuestionDetailViewController.swift in Sources */,
+				8D64812825AEDEDD00A25322 /* SignatureViewController.swift in Sources */,
 				8D64811E25AEAA4800A25322 /* NewReportViewController.swift in Sources */,
 				8DDC3C082594866E00F3A03F /* QuestionModel.swift in Sources */,
 				8D1464232589EF8D00A35AD5 /* TemplateModel.swift in Sources */,
@@ -351,6 +382,7 @@
 				8D5DBB6C2588BBC500E68175 /* UIColorExtension.swift in Sources */,
 				8DDC3C0C2594878300F3A03F /* QuestionCell.swift in Sources */,
 				8D5DBB782589AA7100E68175 /* HeaderView.swift in Sources */,
+				8D64812E25AEDF0900A25322 /* AnswerQuestionViewController.swift in Sources */,
 				8D15659525A6F7B1003DFF0F /* ReportCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

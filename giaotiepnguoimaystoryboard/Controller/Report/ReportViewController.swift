@@ -15,13 +15,13 @@ class ReportViewController: UIViewController {
     var reports: [ReportModel] = []
     
     var inprogressReports: [ReportModel] = [
-        ReportModel(name: "Báo cáo quán cà phê", description: "221 Trần Hưng Đạo, P.6, Q.1", image: #imageLiteral(resourceName: "templateimage"), progress: 0.3, template: templates[2], answers: []),
-        ReportModel(name: "Báo cáo quán cà phê", description: "221 Trần Hưng Đạo, P.6, Q.1", image: #imageLiteral(resourceName: "templateimage"), progress: 0.8, template: templates[2], answers: []),
-        ReportModel(name: "Báo cáo quán cà phê", description: "221 Trần Hưng Đạo, P.6, Q.1", image: #imageLiteral(resourceName: "templateimage"), progress: 0.1, template: templates[2], answers: [])
+        ReportModel(name: "Báo cáo quán cà phê", description: "221 Trần Hưng Đạo, P.6, Q.1", image: #imageLiteral(resourceName: "templateimage"), shelfImage: #imageLiteral(resourceName: "templateimage"), progress: 0.3, template: templates[2], answers: []),
+        ReportModel(name: "Báo cáo quán cà phê", description: "221 Trần Hưng Đạo, P.6, Q.1", image: #imageLiteral(resourceName: "templateimage"), shelfImage: #imageLiteral(resourceName: "templateimage"), progress: 0.8, template: templates[2], answers: []),
+        ReportModel(name: "Báo cáo quán cà phê", description: "221 Trần Hưng Đạo, P.6, Q.1", image: #imageLiteral(resourceName: "templateimage"), shelfImage: #imageLiteral(resourceName: "templateimage"), progress: 0.1, template: templates[2], answers: [])
     ]
     
     var finishedReports: [ReportModel] = [
-        ReportModel(name: "Báo cáo quán cà phê", description: "221 Trần Hưng Đạo, P.6, Q.1", image: #imageLiteral(resourceName: "templateimage"), progress: 1, template: templates[2], answers: [])
+        ReportModel(name: "Báo cáo quán cà phê", description: "221 Trần Hưng Đạo, P.6, Q.1", image: #imageLiteral(resourceName: "templateimage"), shelfImage: #imageLiteral(resourceName: "templateimage"), progress: 1, template: templates[2], answers: [])
     ]
 
     override func viewDidLoad() {
