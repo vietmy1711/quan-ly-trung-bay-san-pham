@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,13 +63,23 @@
                             <constraint firstAttribute="height" constant="1" id="byX-it-PSn"/>
                         </constraints>
                     </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RwO-HB-An9">
+                        <rect key="frame" x="288" y="50.5" width="20" height="16.5"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Yba-GA-lHV"/>
+                            <constraint firstAttribute="width" constant="20" id="ZlA-W5-6fo"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="H9m-ig-vNF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="6eX-ir-DHI"/>
+                    <constraint firstItem="RwO-HB-An9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8ki-9c-Kqh"/>
                     <constraint firstItem="skC-hc-ftd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="Eff-x2-okM"/>
                     <constraint firstItem="skC-hc-ftd" firstAttribute="top" secondItem="H9m-ig-vNF" secondAttribute="bottom" constant="16" id="bEl-Q4-hwH"/>
                     <constraint firstItem="H9m-ig-vNF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="eqP-n4-Pzr"/>
                     <constraint firstAttribute="trailing" secondItem="skC-hc-ftd" secondAttribute="trailing" constant="24" id="fvB-fS-CA3"/>
+                    <constraint firstAttribute="trailing" secondItem="RwO-HB-An9" secondAttribute="trailing" constant="12" id="v3U-yx-Ksw"/>
                     <constraint firstAttribute="trailing" secondItem="H9m-ig-vNF" secondAttribute="trailing" constant="16" id="xDE-Ir-Lpm"/>
                     <constraint firstAttribute="bottom" secondItem="skC-hc-ftd" secondAttribute="bottom" id="yn3-sE-wJ1"/>
                 </constraints>
@@ -80,12 +90,14 @@
                 <outlet property="progressView" destination="ZFP-QC-sdf" id="mMn-XK-VMc"/>
                 <outlet property="reportDescriptionLabel" destination="dxI-QE-yt3" id="Gx2-zt-8fq"/>
                 <outlet property="reportNameLabel" destination="UYL-jX-zgY" id="T5Q-mZ-OHL"/>
+                <outlet property="rightImageView" destination="RwO-HB-An9" id="OcP-jn-nM0"/>
                 <outlet property="thumbImageView" destination="CIg-7B-kY5" id="DyH-8V-v8T"/>
             </connections>
             <point key="canvasLocation" x="31.884057971014496" y="124.21875"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="templateimage" width="88" height="79"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

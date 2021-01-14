@@ -119,11 +119,13 @@ class NewReportViewController: UIViewController {
     
     @objc func signatureBtnClicked() {
         let signatureVC = SignatureViewController()
+        signatureVC.report = self.report
         self.navigationController?.pushViewController(signatureVC, animated: true)
     }
     
     @objc func answerQuestionBtnClicked() {
         let answerQuestionVC = AnswerQuestionViewController()
+        answerQuestionVC.report = self.report
         self.navigationController?.pushViewController(answerQuestionVC, animated: true)
     }
 }

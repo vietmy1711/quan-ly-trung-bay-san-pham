@@ -44,6 +44,8 @@ extension ChooseTemplateViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let newReportVC = NewReportViewController()
+        let report = ReportModel(name: "", description: "", image: nil, shelfImage: nil, progress: 0, template: templates[indexPath.row], answers: [])
+        newReportVC.report = report
         self.navigationController?.pushViewController(newReportVC, animated: true)
     }
 }

@@ -13,7 +13,8 @@ class TemplateCell: UITableViewCell {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var templateImageView: UIImageView!
-    
+    @IBOutlet weak var rightImageView: UIImageView!
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
@@ -24,12 +25,16 @@ class TemplateCell: UITableViewCell {
 
     }
     
-    func configWithTemplate(template: TemplateModel) {
+    func configWithTemplate(template: TemplateModel, isEdit: Bool = false) {
         self.nameLabel.text = template.name
         self.detailLabel.text = template.detail
         self.dateLabel.text = template.questions.count > 1 ? "\(template.questions.count) questions" : "\(template.questions.count) question"
         self.templateImageView.image = template.image
-
+        if isEdit {
+            self.rightImageView.image = UIImage(systemName: "pencil")
+        } else {
+            self.rightImageView.image = UIImage(systemName: "chevron.right")
+        }
     }
     
 }

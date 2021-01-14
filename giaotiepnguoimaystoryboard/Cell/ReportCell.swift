@@ -14,6 +14,7 @@ class ReportCell: UITableViewCell {
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var rightImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,8 +38,10 @@ class ReportCell: UITableViewCell {
         self.progressView.progress = report.progress
         if report.progress < 1 {
             self.progressLabel.text = "In-progress, a few minutes left"
+            self.rightImageView.isHidden = true
         } else {
             self.progressLabel.text = "An hour ago"
+            self.rightImageView.isHidden = false
         }
     }
     

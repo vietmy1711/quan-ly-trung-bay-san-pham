@@ -8,6 +8,8 @@
 import UIKit
 
 class AnswerQuestionViewController: UIViewController {
+    
+    var report: ReportModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,7 @@ class AnswerQuestionViewController: UIViewController {
     
     @objc func signatureBtnClicked() {
         let signatureVC = SignatureViewController()
+        signatureVC.report = self.report
         self.navigationController?.pushViewController(signatureVC, animated: true)
     }
     

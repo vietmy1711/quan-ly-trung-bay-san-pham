@@ -80,7 +80,7 @@ extension TemplateViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TemplateCell") as! TemplateCell
-        cell.configWithTemplate(template: templates[indexPath.row])
+        cell.configWithTemplate(template: templates[indexPath.row], isEdit: true)
         return cell
     }
     
