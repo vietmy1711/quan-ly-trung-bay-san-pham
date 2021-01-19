@@ -41,7 +41,7 @@ class ReportViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationController?.navigationBar.tintColor = .mainColor
-        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.tabBarController?.tabBar.isHidden = false
     }
     
@@ -104,9 +104,14 @@ extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
             if (editingStyle == UITableViewCell.EditingStyle.delete) {
-                let alert = UIAlertController(title: "Cancel report", message: "Are you sure you want to cancel this report", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Cancel report", message: "Are you sure you want to delete this report", preferredStyle: .alert)
                 let delete = UIAlertAction(title: "Yes", style: .destructive) { (_) in
                     self.reports.remove(at: indexPath.row)
+                    if self.segmentedControl.selectedSegmentIndex == 0 {
+                        self.inprogressReports.remove(at: indexPath.row)
+                    } else {
+                        self.finishedReports.remove(at: indexPath.row)
+                    }
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -120,11 +125,10 @@ extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let newTemplateVC = NewTemplateViewController()
-//        newTemplateVC.delegate = self
-//        newTemplateVC.template = templates[indexPath.row]
-//        self.navigationController?.pushViewController(newTemplateVC, animated: true)
-
+        if self.segmentedControl.selectedSegmentIndex == 1 {
+            let reportDetailVC = ReportDetailViewController()
+            self.navigationController?.pushViewController(reportDetailVC, animated: true)
+        }
     }
 }
 
