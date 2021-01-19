@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol SignatureDelegate {
+    func didFinishdSigning(report: ReportModel)
+}
+
 class SignatureViewController: UIViewController {
 
     @IBOutlet weak var signatureTextView: UITextView!
     
     var report: ReportModel?
+    var delegate: SignatureDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +31,7 @@ class SignatureViewController: UIViewController {
     }
     
     @objc func finishBtnClick() {
+        self.delegate?.didFinishdSigning(report: report!)
         self.navigationController?.popToRootViewController(animated: true)
     }
     

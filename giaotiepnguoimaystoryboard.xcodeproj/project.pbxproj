@@ -18,6 +18,8 @@
 		8D15659625A6F7B1003DFF0F /* ReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D15659425A6F7B1003DFF0F /* ReportCell.xib */; };
 		8D15659C25A70E1B003DFF0F /* ChooseTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D15659A25A70E1B003DFF0F /* ChooseTemplateViewController.swift */; };
 		8D15659D25A70E1B003DFF0F /* ChooseTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D15659B25A70E1B003DFF0F /* ChooseTemplateViewController.xib */; };
+		8D476CF825B03B03001DA380 /* AnswerQuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D476CF625B03B03001DA380 /* AnswerQuestionDetailViewController.swift */; };
+		8D476CF925B03B03001DA380 /* AnswerQuestionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D476CF725B03B03001DA380 /* AnswerQuestionDetailViewController.xib */; };
 		8D5DBB18258876B200E68175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB17258876B200E68175 /* AppDelegate.swift */; };
 		8D5DBB1A258876B200E68175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DBB19258876B200E68175 /* SceneDelegate.swift */; };
 		8D5DBB21258876B300E68175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5DBB20258876B300E68175 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		8DDC3C082594866E00F3A03F /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC3C072594866E00F3A03F /* QuestionModel.swift */; };
 		8DDC3C0C2594878300F3A03F /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC3C0A2594878300F3A03F /* QuestionCell.swift */; };
 		8DDC3C0D2594878300F3A03F /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC3C0B2594878300F3A03F /* QuestionCell.xib */; };
+		8DFCF77125B66F5F000823C3 /* ReportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF76F25B66F5F000823C3 /* ReportDetailViewController.swift */; };
+		8DFCF77225B66F5F000823C3 /* ReportDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DFCF77025B66F5F000823C3 /* ReportDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,8 @@
 		8D15659425A6F7B1003DFF0F /* ReportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportCell.xib; sourceTree = "<group>"; };
 		8D15659A25A70E1B003DFF0F /* ChooseTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTemplateViewController.swift; sourceTree = "<group>"; };
 		8D15659B25A70E1B003DFF0F /* ChooseTemplateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseTemplateViewController.xib; sourceTree = "<group>"; };
+		8D476CF625B03B03001DA380 /* AnswerQuestionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionDetailViewController.swift; sourceTree = "<group>"; };
+		8D476CF725B03B03001DA380 /* AnswerQuestionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerQuestionDetailViewController.xib; sourceTree = "<group>"; };
 		8D5DBB14258876B200E68175 /* giaotiepnguoimaystoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giaotiepnguoimaystoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5DBB17258876B200E68175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D5DBB19258876B200E68175 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +92,8 @@
 		8DDC3C072594866E00F3A03F /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		8DDC3C0A2594878300F3A03F /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		8DDC3C0B2594878300F3A03F /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
+		8DFCF76F25B66F5F000823C3 /* ReportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDetailViewController.swift; sourceTree = "<group>"; };
+		8DFCF77025B66F5F000823C3 /* ReportDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +154,15 @@
 			path = ChooseTemplate;
 			sourceTree = "<group>";
 		};
+		8D476CF525B03ABD001DA380 /* AnswerQuestionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8D476CF625B03B03001DA380 /* AnswerQuestionDetailViewController.swift */,
+				8D476CF725B03B03001DA380 /* AnswerQuestionDetailViewController.xib */,
+			);
+			path = AnswerQuestionDetail;
+			sourceTree = "<group>";
+		};
 		8D5DBB0B258876B200E68175 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +199,8 @@
 		8D5DBB2D2588775400E68175 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8DFCF76E25B66EC8000823C3 /* ReportDetail */,
+				8D476CF525B03ABD001DA380 /* AnswerQuestionDetail */,
 				8D64812525AEDEBB00A25322 /* Signature */,
 				8D64812125AEDBC600A25322 /* AnswerQuestion */,
 				8D15659925A70DFA003DFF0F /* ChooseTemplate */,
@@ -280,6 +299,15 @@
 			path = Signature;
 			sourceTree = "<group>";
 		};
+		8DFCF76E25B66EC8000823C3 /* ReportDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8DFCF76F25B66F5F000823C3 /* ReportDetailViewController.swift */,
+				8DFCF77025B66F5F000823C3 /* ReportDetailViewController.xib */,
+			);
+			path = ReportDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,12 +366,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5FB2A22598705600C1DD6D /* QuestionDetailViewController.xib in Resources */,
+				8D476CF925B03B03001DA380 /* AnswerQuestionDetailViewController.xib in Resources */,
 				8D64812F25AEDF0900A25322 /* AnswerQuestionViewController.xib in Resources */,
 				8D5DBB672588BA5D00E68175 /* ReportViewController.xib in Resources */,
 				8D14642A2589F5B900A35AD5 /* NewTemplateViewController.xib in Resources */,
 				8D15659625A6F7B1003DFF0F /* ReportCell.xib in Resources */,
 				8D5DBB732588BE5600E68175 /* TemplateCell.xib in Resources */,
 				8D5DBB24258876B300E68175 /* LaunchScreen.storyboard in Resources */,
+				8DFCF77225B66F5F000823C3 /* ReportDetailViewController.xib in Resources */,
 				8DDC3C0D2594878300F3A03F /* QuestionCell.xib in Resources */,
 				8D5DBB21258876B300E68175 /* Assets.xcassets in Resources */,
 				8D5DBB612588B9B000E68175 /* TemplateViewController.xib in Resources */,
@@ -376,9 +406,11 @@
 				8D146430258A4FAA00A35AD5 /* AddQuestionViewController.swift in Sources */,
 				8D15659125A6ED49003DFF0F /* AnswerModel.swift in Sources */,
 				8D15658E25A6E9CD003DFF0F /* ReportModel.swift in Sources */,
+				8D476CF825B03B03001DA380 /* AnswerQuestionDetailViewController.swift in Sources */,
 				8D5DBB662588BA5D00E68175 /* ReportViewController.swift in Sources */,
 				8D5DBB1A258876B200E68175 /* SceneDelegate.swift in Sources */,
 				8D1464292589F5B900A35AD5 /* NewTemplateViewController.swift in Sources */,
+				8DFCF77125B66F5F000823C3 /* ReportDetailViewController.swift in Sources */,
 				8D5DBB6C2588BBC500E68175 /* UIColorExtension.swift in Sources */,
 				8DDC3C0C2594878300F3A03F /* QuestionCell.swift in Sources */,
 				8D5DBB782589AA7100E68175 /* HeaderView.swift in Sources */,

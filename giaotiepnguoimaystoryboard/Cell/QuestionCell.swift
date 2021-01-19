@@ -27,4 +27,12 @@ class QuestionCell: UITableViewCell {
         typeLabel.text = question.type.rawValue
     }
 
+    func configWithQuestionAnswer(question: QuestionModel, answer: AnswerModel?) {
+        titleLabel.text = question.title
+        if let answer = answer, !answer.answer.isEmpty {
+            typeLabel.text = answer.answer
+        } else {
+            typeLabel.text = "No answer"
+        }
+    }
 }

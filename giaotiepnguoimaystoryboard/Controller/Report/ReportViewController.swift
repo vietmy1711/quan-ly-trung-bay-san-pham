@@ -11,6 +11,7 @@ class ReportViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var newButton: UIButton!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var reports: [ReportModel] = []
     
@@ -71,8 +72,18 @@ class ReportViewController: UIViewController {
     
     @IBAction func newReportBtnClicked(_ sender: UIButton) {
         let chooseTemplateVC = ChooseTemplateViewController()
+        chooseTemplateVC.delegate = self
         self.navigationController?.pushViewController(chooseTemplateVC, animated: true)
     }
+}
+extension ReportViewController: ChooseTemplateDelegate {
+    func didFinishedWithReport(report: ReportModel) {
+        inprogressReports.append(report)
+        reports = inprogressReports
+        segmentedControl.selectedSegmentIndex = 0
+        tableView.reloadData()
+    }
+    
 }
 
 extension ReportViewController: UITableViewDelegate, UITableViewDataSource {

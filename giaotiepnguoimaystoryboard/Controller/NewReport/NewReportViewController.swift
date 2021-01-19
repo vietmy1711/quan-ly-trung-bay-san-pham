@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol NewReportDelegate:class {
+    func didFinishSigning(report: ReportModel)
+}
+
 class NewReportViewController: UIViewController {
     
     @IBOutlet weak var nameView: UIView!
@@ -21,6 +25,8 @@ class NewReportViewController: UIViewController {
     var report: ReportModel?
     
     var isThumbnail = true
+    
+    var delegate: NewReportDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,13 +126,25 @@ class NewReportViewController: UIViewController {
     @objc func signatureBtnClicked() {
         let signatureVC = SignatureViewController()
         signatureVC.report = self.report
+        signatureVC.delegate = self
         self.navigationController?.pushViewController(signatureVC, animated: true)
     }
     
     @objc func answerQuestionBtnClicked() {
         let answerQuestionVC = AnswerQuestionViewController()
         answerQuestionVC.report = self.report
+        answerQuestionVC.delegate = self
         self.navigationController?.pushViewController(answerQuestionVC, animated: true)
+    }
+}
+
+extension NewReportViewController: SignatureDelegate, AnswerQuestionDelegate {
+    func didFinishSigning(report: ReportModel) {
+        self.delegate?.didFinishSigning(report: report)
+    }
+    
+    func didFinishdSigning(report: ReportModel) {
+        self.delegate?.didFinishSigning(report: report)
     }
 }
 

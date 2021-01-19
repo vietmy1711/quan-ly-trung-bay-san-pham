@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol ChooseTemplateDelegate {
+    func didFinishedWithReport(report: ReportModel)
+}
+
 class ChooseTemplateViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var delegate: ChooseTemplateDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +52,13 @@ extension ChooseTemplateViewController: UITableViewDelegate, UITableViewDataSour
         let newReportVC = NewReportViewController()
         let report = ReportModel(name: "", description: "", image: nil, shelfImage: nil, progress: 0, template: templates[indexPath.row], answers: [])
         newReportVC.report = report
+        newReportVC.delegate = self
         self.navigationController?.pushViewController(newReportVC, animated: true)
+    }
+}
+
+extension ChooseTemplateViewController: NewReportDelegate {
+    func didFinishSigning(report: ReportModel) {
+        self.delegate?.didFinishedWithReport(report: report)
     }
 }
